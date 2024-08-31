@@ -9,7 +9,7 @@ public class SettingsPopup : MonoBehaviour
 
     void Start()
     {
-        speedInput.text = PlayerPrefs.GetFloat("BubblesTouchSpeed", 10).ToString();
+        speedInput.text = PlayerPrefs.GetFloat("BubblesTouchSpeed", 4).ToString();
     }
 
     private void OnDisable()

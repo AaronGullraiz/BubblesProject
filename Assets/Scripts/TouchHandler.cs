@@ -24,6 +24,8 @@ public class TouchHandler : MonoBehaviour
 
     private void OnDisable()
     {
+        transform.localScale = Vector3.one * -1;
+
         if (tween != null)
         {
             tween.Kill();
@@ -33,11 +35,11 @@ public class TouchHandler : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        transform.DOShakeScale(0.25f,1f,20);
-
         if (!hasTouched && tween != null)
         {
             hasTouched = true;
+            transform.DOShakeScale(0.25f, 1f, 20);
+            GetComponent<AudioSource>().Play();
             tween.timeScale = parentObj.touchSpeed;
         }
     }

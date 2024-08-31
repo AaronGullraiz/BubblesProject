@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +28,10 @@ public class AnimalsSpawner : MonoBehaviour
             {
                 var an = Instantiate(Resources.Load($"{folderName}/{name}"), animal.transform) as GameObject;
                 an.name = name;
-                //an.GetComponent<SetTexture>().SetTextureOnAnimal(texture);
+
+                
+
+                an.GetComponent<SetTexture>().SetTextureOnAnimal(texture);
                 spawnedAnimals.Add(an);
                 return true;
             }

@@ -14,7 +14,7 @@ public class BubbleHandler : MonoBehaviour
 
     void Start()
     {
-        touchSpeed = PlayerPrefs.GetFloat("BubblesTouchSpeed", 10);
+        touchSpeed = PlayerPrefs.GetFloat("BubblesTouchSpeed", 4);
 
         StartCoroutine(SpawnBubbles());
     }
